@@ -1,6 +1,5 @@
 package io.tray.file;
 
-
 import io.tray.file.processor.*;
 import io.tray.model.Configuration;
 
@@ -53,5 +52,4 @@ public class InputReader {
         processors.add(new RobotStartProcessor());
         processors.add(new DirtLocationProcessor());
     }
-
 }

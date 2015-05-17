@@ -26,8 +26,8 @@ public class InputReaderTest {
         InputReader inputReader = new InputReader();
         Configuration config = inputReader.configureFromFile(Arrays.stream(inputFile));
 
-        assertEquals(5, config.getRoom().getX());
-        assertEquals(5, config.getRoom().getY());
+        assertEquals(4, config.getRoom().getX());
+        assertEquals(4, config.getRoom().getY());
 
         assertEquals(new Coordinates(1, 2), config.getRobot().getLocation());
 

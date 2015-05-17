@@ -17,7 +17,7 @@ public class RoomSizeProcessorTest {
         roomSizeProcessor.process("3 3", config);
 
         Room room = config.getRoom();
-        assertEquals(3, room.getX());
-        assertEquals(3, room.getY());
+        assertEquals(2, room.getX());
+        assertEquals(2, room.getY());
     }
 }

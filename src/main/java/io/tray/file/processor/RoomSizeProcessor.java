@@ -11,7 +11,7 @@ public class RoomSizeProcessor implements LineProcessor {
 
         Coordinates topRight = Coordinates.stringToCoordinates(line);
 
-        Room room = new Room(topRight.getX(), topRight.getY());
+        Room room = new Room(topRight.getX() - 1, topRight.getY() - 1);
         configuration.setRoom(room);
 
         return configuration;
