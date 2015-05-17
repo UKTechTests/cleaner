@@ -17,26 +17,29 @@ public class RobotRunner {
         checkForDirtAndRemove(robot, dirt);
 
         for (String direction : path.getPathQueue()) {
-
-            Direction movement;
-            if ("N".equals(direction)) {
-                movement = new North();
-            }
-            else if ("E".equals(direction)) {
-                movement = new East();
-            }
-            else if ("S".equals(direction)) {
-                movement = new South();
-            }
-            else {
-                movement = new West();
-            }
-
-            movement.move(robot, room);
-            checkForDirtAndRemove(robot, dirt);
+            move(robot, room, dirt, direction);
         }
 
         return robot;
+    }
+
+    private static void move(Robot robot, Room room, Dirt dirt, String direction) {
+        Direction movement;
+        if ("N".equals(direction)) {
+            movement = new North();
+        }
+        else if ("E".equals(direction)) {
+            movement = new East();
+        }
+        else if ("S".equals(direction)) {
+            movement = new South();
+        }
+        else {
+            movement = new West();
+        }
+
+        movement.move(robot, room);
+        checkForDirtAndRemove(robot, dirt);
     }
 
     private static void checkForDirtAndRemove(Robot robot, Dirt dirt) {
