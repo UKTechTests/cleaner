@@ -8,7 +8,6 @@ public class RoomSizeProcessor implements LineProcessor {
 
     @Override
     public Configuration process(String line, Configuration configuration) {
-
         Coordinates topRight = Coordinates.stringToCoordinates(line);
 
         Room room = new Room(topRight.getX() - 1, topRight.getY() - 1);

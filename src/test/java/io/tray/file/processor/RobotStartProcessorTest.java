@@ -2,10 +2,9 @@ package io.tray.file.processor;
 
 import io.tray.model.Configuration;
 import io.tray.model.Robot;
-import io.tray.model.Room;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class RobotStartProcessorTest {
 

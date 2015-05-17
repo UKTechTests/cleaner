@@ -1,6 +1,5 @@
 package io.tray;
 
-
 import io.tray.direction.*;
 import io.tray.model.*;
 
@@ -9,7 +8,6 @@ import java.util.List;
 public class RobotRunner {
 
     public static Robot run(Configuration configuration) {
-
         Robot robot = configuration.getRobot();
 
         Path path = configuration.getPath();
@@ -37,7 +35,6 @@ public class RobotRunner {
             movement.move(robot, room);
             checkForDirtAndRemove(robot, dirt);
         }
-
 
         return robot;
     }
