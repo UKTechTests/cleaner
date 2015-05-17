@@ -3,7 +3,7 @@ package io.tray;
 import io.tray.direction.*;
 import io.tray.model.*;
 
-import java.util.List;
+import java.util.Set;
 
 public class RobotRunner {
 
@@ -42,7 +42,7 @@ public class RobotRunner {
     private static void checkForDirtAndRemove(Robot robot, Dirt dirt) {
         Coordinates robotLocation = robot.getLocation();
 
-        List<Coordinates> dirtLocations = dirt.getLocations();
+        Set<Coordinates> dirtLocations = dirt.getLocations();
 
         if (dirtLocations.remove(robotLocation)) {
             robot.incrementDirtRemoval();

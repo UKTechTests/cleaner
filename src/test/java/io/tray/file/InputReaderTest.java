@@ -5,7 +5,7 @@ import io.tray.model.Coordinates;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -32,7 +32,7 @@ public class InputReaderTest {
 
         assertEquals(new Coordinates(1, 2), config.getRobot().getLocation());
 
-        List<Coordinates> dirtLocations = config.getDirt().getLocations();
+        Set<Coordinates> dirtLocations = config.getDirt().getLocations();
         assertEquals(3, dirtLocations.size());
 
         assertTrue(dirtLocations.contains(new Coordinates(1, 0)));

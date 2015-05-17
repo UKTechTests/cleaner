@@ -5,7 +5,7 @@ import io.tray.model.Coordinates;
 import io.tray.model.Dirt;
 import org.junit.Test;
 
-import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,8 +21,13 @@ public class DirtLocationProcessorTest {
 
         Dirt dirt = configuration.getDirt();
 
-        List<Coordinates> locations = dirt.getLocations();
-        Coordinates testDirt = locations.get(0);
+        Set<Coordinates> locations = dirt.getLocations();
+
+        Coordinates testDirt = new Coordinates(0, 0);
+        for (Coordinates location : locations) {
+            testDirt = location;
+            break;
+        }
 
         assertEquals(1, testDirt.getX());
         assertEquals(2, testDirt.getY());

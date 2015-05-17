@@ -1,17 +1,17 @@
 package io.tray.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Dirt {
 
-    private List<Coordinates> locations = new ArrayList<>();
+    private Set<Coordinates> locations = new HashSet<>();
 
     public void addLocation(Coordinates location) {
         locations.add(location);
     }
 
-    public List<Coordinates> getLocations() {
+    public Set<Coordinates> getLocations() {
         return locations;
     }
 }

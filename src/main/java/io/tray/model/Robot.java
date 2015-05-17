@@ -7,6 +7,7 @@ public class Robot {
 
     public Robot(Coordinates location) {
         this.location = location;
+        this.dirtRemovalCount = 0;
     }
 
     public void setLocation(Coordinates location) {
